@@ -50,6 +50,15 @@
                 targetElement.scrollIntoView({ behavior: 'smooth' });
             }
         }
+
+        // 解碼 .enc 人名
+        document.querySelectorAll(".enc").forEach((el) => {
+            try {
+                const bin = atob(el.dataset.n);
+                const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0));
+                el.textContent = new TextDecoder("utf-8").decode(bytes);
+            } catch (e) {}
+        });
     });
 </script>
 <body>
@@ -68,7 +77,7 @@
         <div class="sectioner-header text-center ">
           <h3>國立中山大學 網路程式設計研究社</h3>
           <span class="line"></span>
-          <p >114-1 課程資訊</p>
+          <p >115-1 課程資訊</p>
         </div>
     </div>
 </div>
@@ -78,15 +87,13 @@
 <section class="class" data-scroll-index='1'>
     <div class="table_container">
         <div class="course-image">
-            <img src="../images/14th/CTeacher.jpg" alt="圖片遺失">
+            <img src="../images/15th/CTeacher.webp" alt="圖片遺失">
         </div>
         <div class="course-info">
-            <h4>從零開始學 C 語言：基礎程式設計入門</h4>
-            <p>資管116級 查欣瑜</p>
+            <h4>從零開始寫C++</h4>
+            <p><span class="enc" data-n="5b6Q5oGp5r6k"></span> 講師</p>
             <h5>課程簡介</h5>
-            <p>本課程從 C 語言環境建置開始，
-                <br>逐步引導學生掌握變數、流程控制、陣列、指標與字串處理等核心觀念，
-                <br>並實作簡易檔案應用，打下程式設計基礎。</p>
+            <p>對程式設計感到陌生也沒關係！這不只是一門 C++ 語法教學課，而是從 C++ 出發認識程式設計的基礎課程。<br>課程將從第一個程式開始，循序學習核心語法與概念，不只教「怎麼寫」，也會帶你理解程式如何運作、背後的邏輯，以及「為什麼要這樣寫」。無需基礎，輕鬆學習，一步步建立程式設計思維。</p>
             <!-- <a href="https://drive.google.com/drive/folders/1IC6mT3BBHv5j2lkQ_AU67DViFa98cPAC">課程教材連結</a> -->
         </div>
         <table>
@@ -97,83 +104,83 @@
             </tr>
             <tr>
                 <td>1</td>
-                <td>2025/09/08</td>
-                <td>準備週</td>
+                <td>2026/09/08</td>
+                <td><b>準備週</b></td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>2025/09/15</td>
-                <td>準備週</td>
+                <td>2026/09/15</td>
+                <td><b>準備週</b></td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>2025/09/22</td>
+                <td>2026/09/22</td>
                 <td><b>期初大會</b></td>
             </tr>
             <tr>
                 <td>4</td>
-                <td>2025/09/29</td>
-                <td><b>中秋放假</b></td>
+                <td>2026/09/29</td>
+                <td>c++介紹和第一個c++程式</td>
             </tr>
             <tr>
                 <td>5</td>
-                <td>2025/10/06</td>
-                <td><b>國慶放假</b></td>
+                <td>2026/10/06</td>
+                <td>資料型態和運算</td>
             </tr>
             <tr>
                 <td>6</td>
-                <td>2025/10/13</td>
-                <td>CodeBlock 安裝；C語言的基本架構、print、變數</td>
+                <td>2026/10/13</td>
+                <td>if / else</td>
             </tr>
             <tr>
                 <td>7</td>
-                <td>2025/10/20</td>
-                <td>變數類別轉換、if, else</td>
+                <td>2026/10/20</td>
+                <td>loop</td>
             </tr>
             <tr>
                 <td>8</td>
-                <td>2025/10/27</td>
+                <td>2026/10/27</td>
                 <td><b>期中週</b></td>
             </tr>
             <tr>
                 <td>9</td>
-                <td>2025/11/03</td>
-                <td>While, do while, for</td>
+                <td>2026/11/03</td>
+                <td>array</td>
             </tr>
             <tr>
                 <td>10</td>
-                <td>2025/11/10</td>
-                <td>Array</td>
+                <td>2026/11/10</td>
+                <td>string</td>
             </tr>
             <tr>
                 <td>11</td>
-                <td>2025/11/17</td>
-                <td>基本函式庫介紹與應用</td>
+                <td>2026/11/17</td>
+                <td>function</td>
             </tr>
             <tr>
                 <td>12</td>
-                <td>2025/11/24</td>
-                <td>Function, pointer</td>
+                <td>2026/11/24</td>
+                <td>pointer</td>
             </tr>
             <tr>
                 <td>13</td>
-                <td>2025/12/01</td>
-                <td>指標和array</td>
+                <td>2026/12/01</td>
+                <td>struct / class</td>
             </tr>
             <tr>
                 <td>14</td>
-                <td>2025/12/08</td>
-                <td>指標和字串</td>
+                <td>2026/12/08</td>
+                <td>複習 / 彈性調整</td>
             </tr>
             <tr>
                 <td>15</td>
-                <td>2025/12/15</td>
-                <td>string讀取、相關函式應用</td>
+                <td>2026/12/15</td>
+                <td><b>黑客松</b></td>
             </tr>
             <tr>
                 <td>16</td>
-                <td>2025/12/22</td>
-                <td><b>課程已結束</b></td>
+                <td>2026/12/22</td>
+                <td><b>期末週</b></td>
             </tr>
         </table>
 
@@ -194,15 +201,13 @@
 <section class="class" data-scroll-index='2'>
     <div class="table_container">
         <div class="course-image">
-            <img src="../images/14th/webTeacher.jpg" alt="圖片遺失">
+            <img src="../images/15th/webTeacher.webp" alt="圖片遺失">
         </div>
         <div class="course-info">
-            <h4>Web程式設計</h4>
-            <p>資管116級 楊雅安</p>
+            <h4>Web全端開發入門</h4>
+            <p><span class="enc" data-n="6YOt5a6257a6"></span> 講師</p>
             <h5>課程簡介</h5>
-            <p>本課程將帶領大家逐步掌握 HTML、CSS 與 JavaScript 的基礎能力，
-                <br>並學習如何運用 GitHub 進行版本控制與協作開發。
-                <br>每堂課都有安排實作練習，讓大家能一步步學會如何上架專屬的網站。即使完全沒有程式基礎，也能輕鬆上手喔！</p>
+            <p>本課程主要目的是讓沒有網頁設計基礎的同學了解網頁的基本架構與運作方式，並循序漸進學習 HTML、CSS、JavaScript、Flask 與 SQL 等網頁開發技術，建立網頁設計與開發的基礎概念及實作能力。</p>
             <!-- <a href="https://drive.google.com/drive/folders/1u6W8siM4sjjD7mumkwJ8GDzfBXuhw3UD">課程教材連結</a> -->
         </div>
         <table>
@@ -213,83 +218,83 @@
             </tr>
             <tr>
                 <td>1</td>
-                <td>2025/09/09</td>
-                <td>準備週</td>
+                <td>2026/09/07</td>
+                <td><b>準備週</b></td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>2025/09/16</td>
-                <td>準備週</td>
+                <td>2026/09/14</td>
+                <td><b>準備週</b></td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>2025/09/23</td>
-                <td>課程簡介 & 基本HTML</td>
+                <td>2026/09/21</td>
+                <td><b>期初大會</b></td>
             </tr>
             <tr>
                 <td>4</td>
-                <td>2025/09/30</td>
-                <td>CSS入門</td>
+                <td>2026/09/28</td>
+                <td><b>放假</b></td>
             </tr>
             <tr>
                 <td>5</td>
-                <td>2025/10/07</td>
-                <td>CSS：position、float</td>
+                <td>2026/10/05</td>
+                <td>網頁架構介紹、HTML</td>
             </tr>
             <tr>
                 <td>6</td>
-                <td>2025/10/14</td>
-                <td>CSS：display</td>
+                <td>2026/10/12</td>
+                <td>HTML、CSS入門</td>
             </tr>
             <tr>
                 <td>7</td>
-                <td>2025/10/21</td>
-                <td>實作練習</td>
+                <td>2026/10/19</td>
+                <td>CSS網頁排版與設計</td>
             </tr>
             <tr>
                 <td>8</td>
-                <td>2025/10/28</td>
+                <td>2026/10/26</td>
                 <td><b>期中週</b></td>
             </tr>
             <tr>
                 <td>9</td>
-                <td>2025/11/04</td>
-                <td>GitHub版本控制&靜態網站架設</td>
+                <td>2026/11/02</td>
+                <td>進階CSS、JavaScript入門</td>
             </tr>
             <tr>
                 <td>10</td>
-                <td>2025/11/11</td>
-                <td>響應式網頁、bootstrap</td>
+                <td>2026/11/09</td>
+                <td>JavaScript與網頁互動</td>
             </tr>
             <tr>
                 <td>11</td>
-                <td>2025/11/18</td>
-                <td>CSS：動畫</td>
+                <td>2026/11/16</td>
+                <td>JavaScript與網頁互動</td>
             </tr>
             <tr>
                 <td>12</td>
-                <td>2025/11/25</td>
-                <td><b>資管週停課</b></td>
+                <td>2026/11/23</td>
+                <td>表單與資料接收</td>
             </tr>
             <tr>
                 <td>13</td>
-                <td>2025/12/02</td>
-                <td>JavaScript入門 & Form</td>
+                <td>2026/11/30</td>
+                <td>Flask 後端入門</td>
             </tr>
             <tr>
                 <td>14</td>
-                <td>2025/12/09</td>
-                <td>實作練習</td>
+                <td>2026/12/07</td>
+                <td>Flask 、資料庫介紹</td>
             </tr>
             <tr>
                 <td>15</td>
-                <td>2025/12/16</td>
-                <td>黑客松</td>
+                <td>2026/12/14</td>
+                <td>Flask、SQL</td>
             </tr>
             <tr>
                 <td>16</td>
-                <td>2025/12/23</td>
-                <td>課程已結束</td>
+                <td>2026/12/21</td>
+                <td><b>期末週</b></td>
             </tr>
         </table>
 
