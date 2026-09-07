@@ -1,0 +1,408 @@
+<!-- 
+  中山網研第 15 屆社課資訊
+  此資料夾用於存放各學期社課詳細內容（如 115-1 課程資訊）
+-->
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>中山網路程式設計研究社 | 課程介紹</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/ui/logo.jpg" type="image/jpeg">
+    <link rel="shortcut icon" href="../images/ui/logo.jpg" type="image/jpeg">
+    <link rel="icon" type="image/x-icon" href="../images/ui/logo.ico">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Font Google -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../images/ui/logo.jpg" type="image/jpeg">
+    <link rel="shortcut icon" href="../images/ui/logo.jpg" type="image/jpeg">
+</head>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // 解析 URL 中的参数
+        const params = new URLSearchParams(window.location.search);
+        const classIndex = params.get('class');
+
+        // 如果存在 class 参数并且是数字
+        if (classIndex !== null && !isNaN(classIndex)) {
+            // 获取要滚动到的元素
+            const targetElement = document.querySelector(`[data-scroll-index='${classIndex}']`);
+
+            // 如果找到目标元素，则执行滚动
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
+</script>
+<body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!---------------------------- Navbar所需要的code --------------------------------------->
+    <div id="navbar-container" class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+    <script src="../js/include.js"></script>
+    <!-------------------------------- End Navbar ------------------------------------------>
+
+<br><br><br>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center ">
+          <h3>國立中山大學 網路程式設計研究社</h3>
+          <span class="line"></span>
+          <p >114-1 課程資訊</p>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
+
+<section class="class" data-scroll-index='1'>
+    <div class="table_container">
+        <div class="course-image">
+            <img src="../images/14th/CTeacher.jpg" alt="圖片遺失">
+        </div>
+        <div class="course-info">
+            <h4>從零開始學 C 語言：基礎程式設計入門</h4>
+            <p>資管116級 查欣瑜</p>
+            <h5>課程簡介</h5>
+            <p>本課程從 C 語言環境建置開始，
+                <br>逐步引導學生掌握變數、流程控制、陣列、指標與字串處理等核心觀念，
+                <br>並實作簡易檔案應用，打下程式設計基礎。</p>
+            <!-- <a href="https://drive.google.com/drive/folders/1IC6mT3BBHv5j2lkQ_AU67DViFa98cPAC">課程教材連結</a> -->
+        </div>
+        <table>
+            <tr>
+                <th>週次</th>
+                <th>日期</th>
+                <th>大綱</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2025/09/08</td>
+                <td>準備週</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2025/09/15</td>
+                <td>準備週</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2025/09/22</td>
+                <td><b>期初大會</b></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>2025/09/29</td>
+                <td><b>中秋放假</b></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>2025/10/06</td>
+                <td><b>國慶放假</b></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>2025/10/13</td>
+                <td>CodeBlock 安裝；C語言的基本架構、print、變數</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>2025/10/20</td>
+                <td>變數類別轉換、if, else</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>2025/10/27</td>
+                <td><b>期中週</b></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>2025/11/03</td>
+                <td>While, do while, for</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>2025/11/10</td>
+                <td>Array</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>2025/11/17</td>
+                <td>基本函式庫介紹與應用</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>2025/11/24</td>
+                <td>Function, pointer</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>2025/12/01</td>
+                <td>指標和array</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>2025/12/08</td>
+                <td>指標和字串</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>2025/12/15</td>
+                <td>string讀取、相關函式應用</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>2025/12/22</td>
+                <td><b>課程已結束</b></td>
+            </tr>
+        </table>
+
+
+
+
+
+
+        <!-- <div>
+            <img src="../images/13th/pyd1.jpg" style="    width: 48%;">
+            <img src="../images/13th/pyw2.jpg" style="    width: 48%;">
+        </div> -->
+    </div>
+</section>
+
+
+<br><br><hr><br><br>
+<section class="class" data-scroll-index='2'>
+    <div class="table_container">
+        <div class="course-image">
+            <img src="../images/14th/webTeacher.jpg" alt="圖片遺失">
+        </div>
+        <div class="course-info">
+            <h4>Web程式設計</h4>
+            <p>資管116級 楊雅安</p>
+            <h5>課程簡介</h5>
+            <p>本課程將帶領大家逐步掌握 HTML、CSS 與 JavaScript 的基礎能力，
+                <br>並學習如何運用 GitHub 進行版本控制與協作開發。
+                <br>每堂課都有安排實作練習，讓大家能一步步學會如何上架專屬的網站。即使完全沒有程式基礎，也能輕鬆上手喔！</p>
+            <!-- <a href="https://drive.google.com/drive/folders/1u6W8siM4sjjD7mumkwJ8GDzfBXuhw3UD">課程教材連結</a> -->
+        </div>
+        <table>
+            <tr>
+                <th>週次</th>
+                <th>日期</th>
+                <th>大綱</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2025/09/09</td>
+                <td>準備週</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2025/09/16</td>
+                <td>準備週</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2025/09/23</td>
+                <td>課程簡介 & 基本HTML</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>2025/09/30</td>
+                <td>CSS入門</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>2025/10/07</td>
+                <td>CSS：position、float</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>2025/10/14</td>
+                <td>CSS：display</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>2025/10/21</td>
+                <td>實作練習</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>2025/10/28</td>
+                <td><b>期中週</b></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>2025/11/04</td>
+                <td>GitHub版本控制&靜態網站架設</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>2025/11/11</td>
+                <td>響應式網頁、bootstrap</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>2025/11/18</td>
+                <td>CSS：動畫</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>2025/11/25</td>
+                <td><b>資管週停課</b></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>2025/12/02</td>
+                <td>JavaScript入門 & Form</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>2025/12/09</td>
+                <td>實作練習</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>2025/12/16</td>
+                <td>黑客松</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>2025/12/23</td>
+                <td>課程已結束</td>
+            </tr>
+        </table>
+
+        <!-- <div>
+            <img src="../images/13th/pyd1.jpg" style="    width: 48%;">
+            <img src="../images/13th/S__317997063_0.jpg" style="    width: 48%;">
+        </div> -->
+    </div>  
+</section>
+</div>
+<section class="download section-padding" data-scroll-index='7' id="7">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sectioner-header text-center white">
+                        <h3>歡迎加入網研社!</h3>
+                        <span class="line"></span>
+                        <p class="white">馬上搜尋網研社FB粉專及社團，獲得第一手資訊</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="section-content text-center">
+                        <ul>
+                            <li class="wow fadeInUp" data-wow-delay="0.4s">
+                                <a href="https://www.facebook.com/NsysuWpdca" target="_blank">
+                                    <img src="../images/ui/fb_icon.png" style="width:50px; height:50px" />
+                                    <span class="white">粉絲專頁</span>
+                                </a>
+                            </li>
+
+                            <li class="wow fadeInUp" data-wow-delay="0.7s">
+                                <a href="https://www.facebook.com/groups/NsysuMisClub" target="_blank">
+                                    <img src="../images/ui/fb_icon.png" style="width:50px; height:50px" />
+                                    <span class="white">FB社團</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+<!-- scrollIt js --> 
+<script src="../js/scrollIt.min.js"></script> 
+<script src="../js/wow.min.js"></script> 
+<script>
+	wow = new WOW();
+	wow.init();
+$(document).ready(function(e) {
+
+	$('#video-icon').on('click',function(e){
+	e.preventDefault();
+	$('.video-popup').css('display','flex');
+	$('.iframe-src').slideDown();
+	});
+	$('.video-popup').on('click',function(e){
+	var $target = e.target.nodeName;
+	var video_src = $(this).find('iframe').attr('src');
+	if($target != 'IFRAME'){
+	$('.video-popup').fadeOut();
+	$('.iframe-src').slideUp();
+	$('.video-popup iframe').attr('src'," ");
+	$('.video-popup iframe').attr('src',video_src);
+	}
+	});
+
+	$('.slider').bxSlider({
+	pager: false
+	});
+});
+    
+$(window).on("scroll",function () {
+
+	var bodyScroll = $(window).scrollTop(),
+	navbar = $(".navbar");
+	
+	if(bodyScroll > 50){
+	$('.navbar-logo img').attr('src','../images/ui/logo.jpg');
+	navbar.addClass("nav-scroll");
+
+}else{
+	$('.navbar-logo img').attr('src','../images/ui/logo.jpg');
+	navbar.removeClass("nav-scroll");
+}
+
+});
+$(window).on("load",function (){
+	var bodyScroll = $(window).scrollTop(),
+	navbar = $(".navbar");
+	
+	if(bodyScroll > 50){
+	$('.navbar-logo img').attr('src','../images/ui/logo.jpg');
+	navbar.addClass("nav-scroll");
+	}else{
+	$('.navbar-logo img').attr('src','../images/ui/logo.jpg');
+	navbar.removeClass("nav-scroll");
+	}
+
+	$.scrollIt({
+	
+	easing: 'swing',      // the easing function for animation
+	scrollTime: 900,       // how long (in ms) the animation takes
+	activeClass: 'active', // class given to the active nav element
+	onPageChange: null,    // function(pageIndex) that is called when page is changed
+	topOffset: -63
+	});
+});
+
+</script>
+  

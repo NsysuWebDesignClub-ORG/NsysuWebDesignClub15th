@@ -1,0 +1,408 @@
+<!-- 
+  中山網研第 15 屆社課資訊
+  此資料夾用於存放各學期社課詳細內容（如 115-2 課程資訊）
+-->
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>中山網路程式設計研究社 | 課程介紹</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/ui/logo.jpg" type="image/jpeg">
+    <link rel="shortcut icon" href="../images/ui/logo.jpg" type="image/jpeg">
+    <link rel="icon" type="image/x-icon" href="../images/ui/logo.ico">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Font Google -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../images/ui/logo.jpg" type="image/jpeg">
+    <link rel="shortcut icon" href="../images/ui/logo.jpg" type="image/jpeg">
+</head>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // 解析 URL 中的参数
+        const params = new URLSearchParams(window.location.search);
+        const classIndex = params.get('class');
+
+        // 如果存在 class 参数并且是数字
+        if (classIndex !== null && !isNaN(classIndex)) {
+            // 获取要滚动到的元素
+            const targetElement = document.querySelector(`[data-scroll-index='${classIndex}']`);
+
+            // 如果找到目标元素，则执行滚动
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
+</script>
+<body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!---------------------------- Navbar所需要的code --------------------------------------->
+    <div id="navbar-container" class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+    <script src="../js/include.js"></script>
+    <!-------------------------------- End Navbar ------------------------------------------>
+
+<br><br><br>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center ">
+          <h3>國立中山大學 網路程式設計研究社</h3>
+          <span class="line"></span>
+          <p >114-2 課程資訊</p>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
+
+<section class="class" data-scroll-index='1'>
+    <div class="table_container">
+        <div class="course-image">
+            <img src="../images/14th/ReactT.jpg" alt="圖片遺失">
+        </div>
+        <div class="course-info">
+            <h4>React.js</h4>
+            <p>資管115級 李景臣</p>
+            <h5>課程簡介</h5>
+            <p>目前許多大型網站/服務的前端 Web 平台，<br>包含 Facebook、Youtube、Netflix 使用 React 進行架
+                設。<br>本課程著重在介紹該主流框架的概念，並在實作中帶領大家從 0 開始學會用 React 寫出小專
+                案。<br>該課程適合熟悉 HTML，CSS，Javascript 知識，以及了解前後端如何互動的同學參與。</p>
+            <!-- <a href="https://drive.google.com/drive/folders/1IC6mT3BBHv5j2lkQ_AU67DViFa98cPAC">課程教材連結</a> -->
+        </div>
+        <table>
+            <tr>
+                <th>週次</th>
+                <th>日期</th>
+                <th>大綱</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2026/02/23</td>
+                <td>準備週</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2026/03/02</td>
+                <td>準備週</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2026/03/09</td>
+                <td class="course-content">React 的介紹+環境架設</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>2026/03/16</td>
+                <td class="course-content">常用的 Javascript 語法</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>2026/03/23</td>
+                <td class="course-content">React JSX 語法</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>2026/03/30</td>
+                <td class="course-content">State 與事件處理</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>2026/04/06</td>
+                <td><b>清明連假</b></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>2026/04/13</td>
+                <td><b>期中考週</b></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>2026/04/20</td>
+                <td class="course-content">Props 的使用</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>2026/04/27</td>
+                <td class="course-content">React Router 的建立</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>2026/05/04</td>
+                <td class="course-content">node.js 的基礎語法</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>2026/05/11</td>
+                <td class="course-content">node.js 和前端互動</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>2026/05/18</td>
+                <td class="course-content">整合式小專題實作</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>2026/05/25</td>
+                <td class="course-content">系統對外部署</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>2026/06/01</td>
+                <td><b>課程已結束</b></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>2026/06/08</td>
+                <td><b>期末考週</b></td>
+            </tr>
+        </table>
+
+
+
+
+
+
+        <!-- <div>
+            <img src="../images/13th/pyd1.jpg" style="    width: 48%;">
+            <img src="../images/13th/pyw2.jpg" style="    width: 48%;">
+        </div> -->
+    </div>
+</section>
+
+
+<br><br><hr><br><br>
+<section class="class" data-scroll-index='2'>
+    <div class="table_container">
+        <div class="course-image">
+            <img src="../images/14th/DeepLearningT.jpg" alt="圖片遺失">
+        </div>
+        <div class="course-info">
+            <h4>猴子也能學會的深度學習</h4>
+            <p>資管115級 張耀仁</p>
+            <h5>課程簡介</h5>
+            <p>這門課目的是作為碩士班深度學習的前置銜接課程，內容包含界燒深度學習技術和應用，<br>
+                了解其中的機制(如attention, CNN model , pytorch , tensor等基礎概念 )，<br>
+                這門課適合有一點點python基礎的人，coding部分應該會以調整超參數為主</p>
+            <!-- <a href="https://drive.google.com/drive/folders/1u6W8siM4sjjD7mumkwJ8GDzfBXuhw3UD">課程教材連結</a> -->
+        </div>
+        <table>
+            <tr>
+                <th>週次</th>
+                <th>日期</th>
+                <th>大綱</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2026/02/24</td>
+                <td>準備週</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2026/03/03</td>
+                <td>準備週</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2026/03/10</td>
+                <td class="course-content">AI 衝擊波:深度學習能為你做什麼?</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>2026/03/17</td>
+                <td class="course-content">數字的預言家:線性回歸與損失函數</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>2026/03/24</td>
+                <td class="course-content">是與非的抉擇:分類基礎與張量觀念</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>2026/03/31</td>
+                <td class="course-content">打造大腦網路:多層感知器 (MLP) 與激活函數</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>2026/04/07</td>
+                <td class="course-content">訓練師的祕笈:優化器與數據集分割</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>2026/04/14</td>
+                <td><b>期中考週</b></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>2026/04/21</td>
+                <td class="course-content">電腦的眼睛:卷積核 (Convolution) 與特徵提取</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>2026/04/28</td>
+                <td class="course-content">建立視覺辨識器:CNN 實戰與評估指標</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>2026/05/05</td>
+                <td class="course-content">走捷徑的藝術:遷移學習 (Transfer Learning)</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>2026/05/12</td>
+                <td class="course-content">記憶的連鎖:RNN/LSTM 與序列處理</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>2026/05/19</td>
+                <td class="course-content">邁向大模型時代:Transformer 與 Hugging Face</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>2026/05/26</td>
+                <td>黑客松</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>2026/06/02</td>
+                <td><b>課程已結束</b></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>2026/06/09</td>
+                <td><b>期末考週</b></td>
+            </tr>
+        </table>
+
+        <!-- <div>
+            <img src="../images/13th/pyd1.jpg" style="    width: 48%;">
+            <img src="../images/13th/S__317997063_0.jpg" style="    width: 48%;">
+        </div> -->
+    </div>  
+</section>
+</div>
+<section class="download section-padding" data-scroll-index='7' id="7">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sectioner-header text-center white">
+                        <h3>歡迎加入網研社!</h3>
+                        <span class="line"></span>
+                        <p class="white">馬上搜尋網研社FB粉專及社團，獲得第一手資訊</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="section-content text-center">
+                        <ul>
+                            <li class="wow fadeInUp" data-wow-delay="0.4s">
+                                <a href="https://www.facebook.com/NsysuWpdca" target="_blank">
+                                    <img src="../images/ui/fb_icon.png" style="width:50px; height:50px" />
+                                    <span class="white">粉絲專頁</span>
+                                </a>
+                            </li>
+
+                            <li class="wow fadeInUp" data-wow-delay="0.7s">
+                                <a href="https://www.facebook.com/groups/NsysuMisClub" target="_blank">
+                                    <img src="../images/ui/fb_icon.png" style="width:50px; height:50px" />
+                                    <span class="white">FB社團</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+<!-- scrollIt js --> 
+<script src="../js/scrollIt.min.js"></script> 
+<script src="../js/wow.min.js"></script> 
+<script>
+	wow = new WOW();
+	wow.init();
+$(document).ready(function(e) {
+
+	$('#video-icon').on('click',function(e){
+	e.preventDefault();
+	$('.video-popup').css('display','flex');
+	$('.iframe-src').slideDown();
+	});
+	$('.video-popup').on('click',function(e){
+	var $target = e.target.nodeName;
+	var video_src = $(this).find('iframe').attr('src');
+	if($target != 'IFRAME'){
+	$('.video-popup').fadeOut();
+	$('.iframe-src').slideUp();
+	$('.video-popup iframe').attr('src'," ");
+	$('.video-popup iframe').attr('src',video_src);
+	}
+	});
+
+	$('.slider').bxSlider({
+	pager: false
+	});
+});
+    
+$(window).on("scroll",function () {
+
+	var bodyScroll = $(window).scrollTop(),
+	navbar = $(".navbar");
+	
+	if(bodyScroll > 50){
+	$('.navbar-logo img').attr('src','../images/ui/logo.jpg');
+	navbar.addClass("nav-scroll");
+
+}else{
+	$('.navbar-logo img').attr('src','../images/ui/logo.jpg');
+	navbar.removeClass("nav-scroll");
+}
+
+});
+$(window).on("load",function (){
+	var bodyScroll = $(window).scrollTop(),
+	navbar = $(".navbar");
+	
+	if(bodyScroll > 50){
+	$('.navbar-logo img').attr('src','../images/ui/logo.jpg');
+	navbar.addClass("nav-scroll");
+	}else{
+	$('.navbar-logo img').attr('src','../images/ui/logo.jpg');
+	navbar.removeClass("nav-scroll");
+	}
+
+	$.scrollIt({
+	
+	easing: 'swing',      // the easing function for animation
+	scrollTime: 900,       // how long (in ms) the animation takes
+	activeClass: 'active', // class given to the active nav element
+	onPageChange: null,    // function(pageIndex) that is called when page is changed
+	topOffset: -63
+	});
+});
+
+</script>
+  
