@@ -36,19 +36,25 @@
   </head>
   <script>
     window.addEventListener("DOMContentLoaded", (event) => {
-      // 解析 URL 中的参数
+      // 解析 URL 中的參數或 hash
       const params = new URLSearchParams(window.location.search);
-      const Index = params.get("data-scroll-index");
-      // 如果存在 data-scroll-index
-      if (Index !== null && !isNaN(Index)) {
-        const targetElement = document.querySelector(
-          `[data-scroll-index='${Index}']`,
-        );
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: "smooth",
-          });
-        }
+      const rawIndex =
+        params.get("data-scroll-index") ||
+        (window.location.hash ? window.location.hash.replace("#", "") : null);
+      if (rawIndex !== null && rawIndex !== "" && !isNaN(rawIndex)) {
+        const scrollToTarget = () => {
+          const targetElement =
+            document.querySelector(`[data-scroll-index='${rawIndex}']`) ||
+            document.getElementById(rawIndex);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        };
+        // 延遲執行確保導航列非同步加載完成後定位精確
+        setTimeout(scrollToTarget, 100);
+        setTimeout(scrollToTarget, 400);
       }
     });
 
@@ -80,7 +86,11 @@
     <!-------------------------------- End Navbar ------------------------------------------>
 
     <!-------News Start------->
-    <section class="video section-padding prelative">
+    <section
+      class="video section-padding prelative"
+      data-scroll-index="0"
+      id="0"
+    >
       <div class="container">
         <div class="row" style="width: 50vw">
           <div class="col-md-12">
@@ -188,11 +198,11 @@
               <h3>指導教授</h3>
               <span class="line"></span>
               <p>
-                這學期我們非常榮幸邀請到羅珮綺教授擔任網研社的指導教授。身為創社第一屆元老，羅老師感性地表示，看到自己親手參與開創的社團至今依然活力十足，內心充滿了感動與欣慰。她也期許這份對網路技術熱愛的火苗，能透過每一位社員的手，代代相傳下去！
+                本學期我們十分榮幸能由羅珮綺教授引領網研社。作為第一屆創社元老，羅老師深情分享，看著當年親手創立的社團如今依然蓬勃茁壯、充滿朝氣，內心滿是動容與欣慰。她也期勉大家將這份對網路技術的熱忱薪火相傳，由每位社員的手中代代延續下去！
               </p>
             </div>
+            <!-- 指導教授照片區塊（暫時註解）
             <div class="row justify-content-center">
-              <!-- 左圖：113-1 教授致詞 -->
               <div class="col-md-5 text-center">
                 <img
                   src="images/14th/professor.jpg"
@@ -204,7 +214,6 @@
                 </p>
               </div>
 
-              <!-- 右圖：113-2 教授致詞 -->
               <div class="col-md-5 text-center">
                 <img
                   src="images/14th/professor2.jpg"
@@ -216,6 +225,7 @@
                 </p>
               </div>
             </div>
+            -->
           </div>
         </div>
       </div>
@@ -665,186 +675,162 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <!-- 以下由你提供資料自動產出 -->
+                    <!-- 115-1 社課報名名單（已打亂順序，姓名採 Base64 編碼保護個資隱私） -->
                     <tr>
                       <td>1</td>
-                      <td>李柏賢</td>
-                      <td>資管118</td>
-                      <td>Web網頁設計</td>
+                      <td><span class="enc" data-n="5p2O54+u6Jaw"></span></td>
+                      <td>資管119</td>
+                      <td>Web全端開發入門</td>
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>陳佳晨</td>
-                      <td>資管117</td>
-                      <td>Web網頁設計</td>
+                      <td><span class="enc" data-n="6JiH5a625aaN"></span></td>
+                      <td>資管119</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>汪俊廷</td>
-                      <td>資管118</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="546L6Iqu5rSL"></span></td>
+                      <td>資管119</td>
+                      <td>從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>4</td>
-                      <td>陳彥伯</td>
-                      <td>資管117</td>
-                      <td>Web網頁設計</td>
+                      <td><span class="enc" data-n="5b2t56eR5o23"></span></td>
+                      <td>資管118</td>
+                      <td>Web全端開發入門</td>
                     </tr>
                     <tr>
                       <td>5</td>
-                      <td>李蘇容</td>
+                      <td><span class="enc" data-n="5p2O6JiH5a65"></span></td>
                       <td>資管118</td>
-                      <td>Web網頁設計</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>6</td>
-                      <td>鄭之翎</td>
-                      <td>資管117</td>
-                      <td>Web網頁設計</td>
+                      <td><span class="enc" data-n="6Zmz6ZeI6ZyG"></span></td>
+                      <td>資管116</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>7</td>
-                      <td>趙顯彬</td>
-                      <td>企管113</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="6aau5a6c5Y2J"></span></td>
+                      <td>資管119</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>8</td>
-                      <td>許書函</td>
+                      <td><span class="enc" data-n="5rGq5L+K5bu3"></span></td>
                       <td>資管118</td>
-                      <td>Web網頁設計</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>9</td>
-                      <td>黄宥程</td>
+                      <td><span class="enc" data-n="5p6X5oCd6Iq4"></span></td>
                       <td>資管118</td>
-                      <td>C 語言</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>10</td>
-                      <td>汪泓易</td>
-                      <td>資管118</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="5ZCz5a6l6JCx"></span></td>
+                      <td>資管119</td>
+                      <td>從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>11</td>
-                      <td>楊婷云</td>
-                      <td>資管118</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="6buD5aSp5oWn"></span></td>
+                      <td>資管119</td>
+                      <td>從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>12</td>
-                      <td>林宥妤</td>
-                      <td>資管118</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="55WZ6YOB6ZuF"></span></td>
+                      <td>資管119</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>13</td>
-                      <td>蔡以恩</td>
+                      <td><span class="enc" data-n="6auY5a6a6amk"></span></td>
                       <td>資管118</td>
-                      <td>Web網頁設計</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>14</td>
-                      <td>林柏翰</td>
-                      <td>資管118</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="5rSq5pmo6ZuF"></span></td>
+                      <td>資管119</td>
+                      <td>從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>15</td>
-                      <td>高定驤</td>
-                      <td>資管118</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="5p2O56WQ5Lie"></span></td>
+                      <td>海工116</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>16</td>
-                      <td>張微咏</td>
-                      <td>資管117</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="5ZGo6Iq456a+"></span></td>
+                      <td>資管119</td>
+                      <td>Web全端開發入門</td>
                     </tr>
                     <tr>
                       <td>17</td>
-                      <td>凌于婷</td>
-                      <td>資管117</td>
-                      <td>C 語言</td>
+                      <td><span class="enc" data-n="5q2Q5a645Z2H"></span></td>
+                      <td>資管119</td>
+                      <td>從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>18</td>
-                      <td>王亭立</td>
-                      <td>資管117</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="5p+v57Wc55Sv"></span></td>
+                      <td>資管118</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>19</td>
-                      <td>何昕芳</td>
-                      <td>資管117</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="57Ch5pix5a6J"></span></td>
+                      <td>資管116</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>20</td>
-                      <td>陳粢渝</td>
-                      <td>資管117</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="5ri45Za75pyf"></span></td>
+                      <td>資管119</td>
+                      <td>Web全端開發入門</td>
                     </tr>
                     <tr>
                       <td>21</td>
-                      <td>廖禹青</td>
-                      <td>資管118</td>
-                      <td>C 語言</td>
+                      <td><span class="enc" data-n="5YKF5b+X5a6P"></span></td>
+                      <td>資管116</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>22</td>
-                      <td>柯絜甯</td>
-                      <td>資管118</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="6buD5p+P55GL"></span></td>
+                      <td>資管116</td>
+                      <td>從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>23</td>
-                      <td>白成君</td>
-                      <td>資管118</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="5Y+k6JWZ5qOL"></span></td>
+                      <td>資管119</td>
+                      <td>從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>24</td>
-                      <td>林思芸</td>
-                      <td>資管118</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="546L55qT5rid"></span></td>
+                      <td>資管116</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>25</td>
-                      <td>上官語恬</td>
-                      <td>資管117</td>
-                      <td>Web網頁設計</td>
+                      <td><span class="enc" data-n="55m95oiQ5ZCb"></span></td>
+                      <td>資管118</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                     <tr>
                       <td>26</td>
-                      <td>李若昀</td>
-                      <td>資管117</td>
-                      <td>Web網頁設計, C 語言</td>
-                    </tr>
-                    <tr>
-                      <td>27</td>
-                      <td>阮子珊</td>
-                      <td>資管117</td>
-                      <td>Web網頁設計</td>
-                    </tr>
-                    <tr>
-                      <td>28</td>
-                      <td>翁圓舒</td>
-                      <td>資管117</td>
-                      <td>Web網頁設計</td>
-                    </tr>
-                    <tr>
-                      <td>29</td>
-                      <td>陳顥予</td>
-                      <td>資管118</td>
-                      <td>C 語言</td>
-                    </tr>
-                    <tr>
-                      <td>30</td>
-                      <td>李薇欣</td>
-                      <td>資管118</td>
-                      <td>Web網頁設計, C 語言</td>
+                      <td><span class="enc" data-n="5p2O5ZOB56mO"></span></td>
+                      <td>資管119</td>
+                      <td>Web全端開發入門, 從零開始寫C++</td>
                     </tr>
                   </tbody>
                 </table>

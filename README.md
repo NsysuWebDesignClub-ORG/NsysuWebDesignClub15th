@@ -57,6 +57,48 @@ NsysuWebDesignClub15th/
 * 全站導航列透過 `js/include.js` 動態非同步載入 `navbar.html`。
 * 若需新增或調整頂部導航連結（例如外部教材連結、各區塊錨點），只需修改 `navbar.html` 一處，全站頁面即同步生效。
 
+### 5. 🔒 個資隱私保護與姓名編碼機制（防網路爬蟲）
+
+#### 📌 設計目的與背景
+網站中包含社團幹部、講師及「社課報名名單」之真實姓名。為保護社員與幹部的**個人資料隱私**，避免姓名直接以純文字（Plaintext）形式暴露於 HTML 靜態原始碼中，被網路自動化爬蟲（Scrapers）、搜尋引擎索引或惡意機器人隨意抓取與收錄，本站採用前端編碼與動態還原機制。
+
+#### ⚙️ 實現原理
+* **HTML 原始碼層級**：所有真實姓名均不直接寫出中文字，改用自訂的 `<span class="enc" data-n="Base64編碼字串"></span>` 標籤替換。
+* **瀏覽器渲染層級**：在 `index.html` 頁面載入完成（`DOMContentLoaded` 事件觸發）時，透過原生的 `TextDecoder` 與 `atob()` 自動將 UTF-8 編碼還原為真實姓名並填入畫面：
+  ```javascript
+  document.querySelectorAll(".enc").forEach((el) => {
+    try {
+      const bin = atob(el.dataset.n);
+      const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0));
+      el.textContent = new TextDecoder("utf-8").decode(bytes);
+    } catch (e) {
+      /* 解碼失敗維持空白，不影響頁面其餘內容 */
+    }
+  });
+  ```
+* **報名課程與系級**：社課名稱（如「Web全端開發入門」、「從零開始寫C++」）與學期系級為公開課程資訊，不具個資識別敏感性，維持明文以保持結構清晰。
+
+#### 🛠️ 後續維護：如何為新名單進行編碼
+若未來學期需更換或新增名單，請先將姓名轉換為 UTF-8 Base64 字串後填入 `data-n` 屬性中：
+* **Node.js**：
+  ```javascript
+  Buffer.from("學生姓名", "utf-8").toString("base64");
+  ```
+* **Python**：
+  ```python
+  import base64
+  base64.b64encode("學生姓名".encode("utf-8")).decode("ascii")
+  ```
+* **瀏覽器 Console**：
+  ```javascript
+  btoa(encodeURIComponent("學生姓名").replace(/%([0-9A-F]{2})/g, (m, p) => String.fromCharCode('0x' + p)))
+  ```
+
+#### ⚠️ 注意事項與防護邊界說明
+1. **編碼 vs. 加密**：此機制本質為 **Base64 混淆編碼**，並非包含金鑰的強密碼學加密（如 AES/RSA）。
+2. **防護範圍**：能有效阻擋**直接檢視原始碼（View Source / Ctrl+U）搜尋姓名**、**一般靜態 HTML 網路爬蟲**與**搜尋引擎文字檢索**。
+3. **技術限制**：若訪問者具備前端開發背景，透過瀏覽器開發者工具（DevTools / F12）檢視已執行 JS 的動態 DOM 樹，或是分析 JS 解碼邏輯，仍能取得還原資料。此機制屬於**強化個人隱私防禦的前端過濾措施**。
+
 ---
 
 ## 🚀 本地開發與預覽
